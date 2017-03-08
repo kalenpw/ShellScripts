@@ -2,4 +2,10 @@
 
 #change to school directory
 
-cd /media/kalenpw/HDD/Documents/School/2016Fall
+if [ "$#" -eq "1" ]; then
+    projectNumber="$1"
+    cd /home/kalenpw/Documents/School/2017Spring/CS3385/p$1
+
+else
+    cd /home/kalenpw/Documents/School/2017Spring
+fi
