@@ -2,4 +2,4 @@
 
 #Launches intellij
 
-/opt/idea-IU-163.13906.18/bin/idea.sh
+/opt/idea-IU-171.4249.39/bin/idea.sh
