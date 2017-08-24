@@ -2,10 +2,13 @@
 
 #change to school directory
 
-if [ "$#" -eq "1" ]; then
-    projectNumber="$1"
-    cd /home/kalenpw/Documents/School/2017Spring/CS3385/p$1
+pcname=$(hostname)
+schoolDir=""
 
+if [ "$pcname" == "kalenpwT420s" ]; then
+    schoolDir="/home/kalenpw/Documents/School/2017Fall/"
 else
-    cd /home/kalenpw/Documents/School/2017Fall
+    schoolDir="/media/kalenpw/HDD/Documents/School/2017Fall"
 fi
+
+cd $schoolDir

@@ -2,10 +2,17 @@
 
 #Cleans up downloads folder
 
-picturesDir="/media/kalenpw/HDD/Pictures/Misc/"
+picturesDir=""
 downloadsDir="/home/kalenpw/Downloads/"
 pictureExtensions=("png" "jpg" "jpeg")
 verbose=false
+pcname=$(hostname)
+
+if [ "$pcname" == "kalenpwT420s" ]; then
+    picturesDir="/media/kalenpw/SDCard/Pictures/Misc/"
+else
+    picturesDir="/media/kalenpw/HDD/Pictures/Misc/"
+fi
 
 #Check if verbose
 if [ "$1" == "-v" ]; then
