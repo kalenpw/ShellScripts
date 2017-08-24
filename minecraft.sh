@@ -1,3 +1,3 @@
 #!/bin/bash
-java -jar /home/kalenpw/Minecraft/Minecraft.jar
+java -jar /home/kalenpw/Games/Minecraft.jar
 
