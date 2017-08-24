@@ -7,5 +7,5 @@ if [ "$#" -eq "1" ]; then
     cd /home/kalenpw/Documents/School/2017Spring/CS3385/p$1
 
 else
-    cd /home/kalenpw/Documents/School/2017Spring
+    cd /home/kalenpw/Documents/School/2017Fall
 fi

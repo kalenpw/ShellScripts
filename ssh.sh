@@ -10,7 +10,7 @@ if [ "$1" == "server" ]; then
     echo "Connecting to khalidor"
     userName="kalenpw"
     port=23
-    ip="67.61.102.26"
+    ip="96.19.26.253"
 fi
 
 if [ "$1" == "pi" ]; then
@@ -24,7 +24,7 @@ if [ "$1" == "desktop" ]; then
     echo "Connecting to desktop"
     userName="kalenpw"
     port=24
-    ip="67.61.102.26"
+    ip="96.19.26.253"
 fi
 
 
