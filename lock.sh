@@ -1,7 +1,7 @@
 #!/bin/bash
-#i#s is an easier-to-tweak version of Steffen Honig's i3lock
-# script.  If it doesn't work, it's his fault ;)
-#
+
+#Lock screen which sets lock to pixelated version of desktop
+
 TEMP_FILE=/tmp/lock.png
 TEMP_FILE_POST=/tmp/lock.modified.png
 BAR_BG_COLOR="black"
