@@ -25,8 +25,8 @@ fi
 for i in "${pictureExtensions[@]}"
 do
     if $verbose; then
-        mv -v -n $downloadsDir*$i $pictureExtensions 
+        mv -v -n $downloadsDir*$i $picturesDir
     else
-        mv -n $downloadsDir*$i $pictureExtensions 
+        mv -n $downloadsDir*$i $picturesDir
     fi
 done

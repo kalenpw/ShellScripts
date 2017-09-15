@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#Records a window clicked on and converts to .webm
+
 WINDOW_ID=$(xwininfo | grep "Window id" | cut -d" " -f4)
 FILE_PATH=~/tmp/test.ogv
 DATE=$(date +%Y-%m-%d)
