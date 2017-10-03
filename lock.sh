@@ -19,4 +19,4 @@ mogrify $MOGRIFY_OPTS
 #echo $MESSAGE | tr -d "\n" | convert $CONVERT_OPTS
 #i3lock -i $TEMP_FILE_POST
 
-i3lock -i $TEMP_FILE
+i3lock -u -i $TEMP_FILE
