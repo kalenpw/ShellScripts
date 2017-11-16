@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/kalenpw/QuteBrowser/qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
+/home/kalenpw/Programs/qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
