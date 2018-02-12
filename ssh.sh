@@ -4,13 +4,18 @@
 
 userName=""
 port=0
-ip=""
+ip="kalenpw.com"
+
+localIpAddr=$(hostname -I)
+ip="kalenpw.com"
 
 if [ "$1" == "server" ]; then
     echo "Connecting to khalidor"
     userName="kalenpw"
     port=23
-    ip="kalenpw.com"
+    if [ "$localIpAddr" == "192.168.0.5 " ]; then
+        ip="192.168.0.6"
+    fi
 fi
 
 if [ "$1" == "pi" ]; then
@@ -25,6 +30,9 @@ if [ "$1" == "desktop" ]; then
     userName="kalenpw"
     port=24
     ip="kalenpw.com"
+    if [ "$localIpAddr" == "192.168.0.5 " ]; then
+        ip="192.168.0.5"
+    fi
 fi
 
 
