@@ -1,11 +1,12 @@
 #!/bin/bash
 
-localIpAddr=$(hostname -I)
+ssid=$(iwgetid -r)
 serverIp="kalenpw.com"
-if [ "$localIpAddr" == "192.168.0.5 " ]; then
+if [ "$ssid" == "bowman_farm_west" ]; then
     echo "Connecting locally"
     serverIp="192.168.0.6"
 fi
+
 
 echo "Use Khalidor password"
 echo "Mounting Fileserver"
