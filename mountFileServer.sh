@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ssid=$(iwgetid -r)
-serverIp="kalenpw.com"
+serverIp="kalenpw.tk"
 if [ "$ssid" == "bowman_farm_west" ]; then
     echo "Connecting locally"
     serverIp="192.168.0.6"

@@ -4,11 +4,9 @@
 
 userName=""
 port=0
-ip="kalenpw.com"
-
 ssid=$(iwgetid -r)
 localIpAddr=$(hostname -I)
-ip="kalenpw.com"
+ip="kalenpw.tk"
 
 if [ "$1" == "server" ]; then
     echo "Connecting to khalidor"
@@ -30,7 +28,7 @@ if [ "$1" == "desktop" ]; then
     echo "Connecting to desktop"
     userName="kalenpw"
     port=24
-    ip="kalenpw.com"
+    ip="kalenpw.tk"
     if [ "$ssid" == "bowman_farm_west" ]; then
         ip="192.168.0.5"
     fi

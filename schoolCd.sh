@@ -6,9 +6,9 @@ pcname=$(hostname)
 schoolDir=""
 
 if [ "$pcname" == "kalenpwT420s" ]; then
-    schoolDir="/home/kalenpw/Documents/School/2017Fall/"
+    schoolDir="/home/kalenpw/Documents/School/2018Fall/"
 else
-    schoolDir="/media/kalenpw/HDD/Documents/School/2017Fall"
+    schoolDir="/media/kalenpw/HDD/Documents/School/2018Fall"
 fi
 
 cd $schoolDir

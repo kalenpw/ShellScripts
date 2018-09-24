@@ -2,6 +2,35 @@
 
 #Laptop wallpaper utility
 
+# move all directories out of current
+reset_current(){
+    for d in $root_wallpaper$current*; do
+        mv $d $root_wallpaper
+    done
+}
+
+add_all(){
+    for d in $root_wallpaper*; do
+        if [ ! "$d/" == "$root_wallpaper$current" ]; then
+            mv $d $root_wallpaper$current
+        fi
+    done
+}
+
+handle_default(){
+    defaults=("Nature" "City" "CalvinAndHobbes")
+    reset_current
+    for i in "${defaults[@]}"; do
+        handle_add $i
+    done
+}
+
+handle_set(){
+    to_set=$1
+    reset_current
+    handle_add $to_set
+}
+
 handle_toggle(){
     to_toggle=$1
     complete_dir="$root_wallpaper$current$to_toggle"
@@ -50,19 +79,26 @@ current="Current/"
 root_wallpaper="/home/kalenpw/Pictures/Wallpaper/"
 
 if [ ! $# == 2 ]; then
-    print_directories
+    if [ "$1" == "default" ]; then
+        handle_default
+    elif [ "$1" == "all" ]; then
+        add_all
+    elif [ "$1" == "none" ]; then
+        reset_current
+    else
+        print_directories
+    fi
     exit
 fi
 
 if [ "$action" == "toggle" ]; then
-    handle_toggle $2
+    handle_toggle $directory
 elif [ "$action" == "add" ]; then
     handle_add $directory
 elif [ "$action" == "remove" ]; then
     handle_remove $directory
+elif [ "$action" == "set" ]; then
+    handle_set $directory
 else
     print_directories
 fi
-
-
-
