@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+import datetime
+
+now = datetime.datetime.today()
+five = datetime.datetime.today().replace(hour=17, minute=0, second = 0)
+
+diff = five - now
+diffSec = diff.seconds
+td_str = "%d:%d" % (diff.seconds/3600, diff.seconds%3600/60)
+if(diffSec < 0):
+    print("It's past 5, cheers!")
+else:
+    print("Hang in there,", td_str, "till 5:00!")
+# print(now)
+# print(five)

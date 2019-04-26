@@ -18,6 +18,13 @@ do
     #formatted="$artist - $song | W: $weather | RAM: $ram%"
     formatted="$cmusOut | RAM: $ram%"
     read line
-    echo -e "$formatted | $line" || exit 1
+    if [[ $(date +%u) -eq "5" ]]; then
+        time=$(timeToFive.py)
+        beerTime="🍺 $time |"
+        echo -e "$beerTime $formatted | $line" || exit 1
+    else
+        echo -e "$formatted | $line" || exit 1
+    fi
+
 
 done
