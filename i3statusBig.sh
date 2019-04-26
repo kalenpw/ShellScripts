@@ -21,7 +21,8 @@ do
     if [[ $(date +%u) -eq "5" ]]; then
         time=$(timeToFive.py)
         beerTime="🍺 $time |"
-        echo -e "$beerTime $formatted | $line" || exit 1
+        newFormat="$cmusOut | $beerTime RAM: $ram%"
+        echo -e "$newFormat | $line" || exit 1
     else
         echo -e "$formatted | $line" || exit 1
     fi
