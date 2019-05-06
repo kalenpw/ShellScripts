@@ -2,4 +2,4 @@
 
 #Launches an instance of /v/scape
 
-java -jar /home/kalenpw/vscape/vidyascape.jar
+java -jar /home/kalenpw/Games/Vscape/vidyascape.jar
