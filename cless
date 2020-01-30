@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+
+# recursively compiles .less files
+# and moves to proper css dir
+# requires less (obviously)
+# http://lesscss.org/
+# npm install -g less
+
+import os
+
+cwd = os.getcwd()
+cssDir = "./public/css/"
+lessDir = "./src/Less/"
+
+for root, subdirs, files in os.walk(os.path.join(cwd, lessDir)):
+    for file in files:
+        # files that start with _ are used for including in other files 
+        if file[0] == "_":
+            continue
+        # get just the subdir that we're in
+        subDirName = root.replace(cwd, "")
+        subDirName = subDirName.replace(lessDir, "")
+        subDirName = subDirName[1:]
+
+        fileNameNoExt = os.path.splitext(file)[0]
+        sourceFile = os.path.join(root, file)
+        destDir = os.path.join(cwd, cssDir, subDirName)
+        destFile = os.path.join(destDir, fileNameNoExt + ".css")
+
+        os.makedirs(destDir, exist_ok=True)
+
+        command = "lessc " + sourceFile + " " + destFile
+        os.system(command)
