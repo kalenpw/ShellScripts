@@ -9,8 +9,8 @@
 import os
 
 cwd = os.getcwd()
-cssDir = "./public/css/"
-lessDir = "./src/Less/"
+cssDir = "./static/css/"
+lessDir = "./less/"
 
 for root, subdirs, files in os.walk(os.path.join(cwd, lessDir)):
     for file in files:
