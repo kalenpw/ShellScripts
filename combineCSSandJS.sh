@@ -13,25 +13,32 @@ if [ "$1" == "django" ]; then
     cssSource="./static/css"
     jsDest="./static/js/app.js"
     cssDest="./static/css/app.css"
+else 
+    exit 1
 fi
+
+date=$(date +"%Y-%m-%d %T")
 
 echo "Don't forget to run from project root"
 
 echo "Erasing app.js"
 
-echo "" > $jsDest
+echo "// Generated $date" > $jsDest
 
 echo "Erasing app.css"
 
-echo "" > $cssDest
+echo "/* Generated $date */" > $cssDest
+
 
 for file in $cssSource/*
 do
     cat $file >> $cssDest
+    echo '' >> $cssDest
 done
 
 for file in $jsSource/*
 do
     cat $file >> $jsDest
+    echo '' >> $jsDest
 done
 
