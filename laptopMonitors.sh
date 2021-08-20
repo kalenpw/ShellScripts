@@ -11,6 +11,6 @@ monitors=$(xrandr | grep " connected " | awk '{ print$1 }')
 if [[ $monitors == *"$external_monitor"* ]]; then
     gsettings set org.gnome.desktop.background picture-uri file:///home/kalenpw/.var/app/org.gabmus.hydrapaper/cache/hydrapaper/merged_wallpaper.png
 else 
-    gsettings set org.gnome.desktop.background picture-uri file:///home/kalenpw/Pictures/Wallpapers/3840x2160/4503893-Matterhorn-train-snow-clouds-Switzerland-.jpg
+    gsettings set org.gnome.desktop.background picture-uri file:///home/kalenpw/Pictures/Wallpapers/taki.jpg
 fi
 
